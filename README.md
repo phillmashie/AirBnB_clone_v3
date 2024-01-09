@@ -1,76 +1,21 @@
-# 0x02. AirBnB clone v2
-  - MySQL
-    > *Group project* *Python* *OOP* *Back-end* *SQL* *MySQL* *ORM* *SQLAlchemy*
-  - Web Framework
-    > *Python* *Back-end* *Webserver* *Flask*
+# AirBnB Clone - RESTful API
 
-## Usage
-- First clone this repository.
+The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A RESTful API is added in this segment to aid data access in AirBnB(HBnB) website.
 
-- To run it:
-  - Using `DBStorage`, Locate the "console.py" file and run it as follows:
-  ```
-  $ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
-  ```
-  - Using `FileStorage`, Locate the "console.py" file and run it as follows:
-  ```
-  $ ./console.py
-  ```
-- When this command is run the following prompt should appear:
-```
-(hbnb)
-```
-- This prompt designates you are in the "HBnB" console. There are a variety of commands available within the console program.
+## Environment
 
-## Supported classes:
-* BaseModel
-* User
-* State
-* City
-* Amenity
-* Place
-* Review
+This project is interpreted/tested on Ubuntu 20.04 LTS using python3 (version 3.4.3)
 
-## Commands:
-* create - create an object
-* show - show an object (based on id)
-* destroy - destroy an object
-* all - show all objects, of one type or all types
-* quit/EOF - quit the console
-* help - see descriptions of commands
+# Getting Started
 
-  #### Create
-  `create <class name>`
-  Ex:
-  `create BaseModel`
+You can launch the API with your storage type of choice and the correct environment variables.
 
-  #### Show
-  `show <class name> <object id>`
-  Ex:
-  `show User my_id`
+- _Database Storage_
+  `HBNB_MYSQL_USER=<mysqluser> HBNB_MYSQL_PWD=<mysqlpassword> HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=<mysqldb> HBNB_TYPE_STORAGE=db HBNB_API_HOST=0.0.0.0 HBNB_API_PORT=5000 python3 -m api.v1.app`
+- _File Storage_
+  `HBNB_API_HOST=0.0.0.0 HBNB_API_PORT=5000 python3 -m api.v1.app`
 
-  #### Destroy
-  `destroy <class name> <object id>`
-  Ex:
-  `destroy Place my_place_id`
+## Authors
 
-  #### All
-  `all` or `all <class name>`
-  Ex:
-  `all` or `all State`
-
-  #### Quit
-  `quit` or `EOF`
-
-  #### Help
-  `help` or `help <command>`
-  Ex:
-  `help` or `help quit`
-
-## Alternate Syntax
-Additionally the console supports 
-- ##### `<class name>.<command>(<parameters>)` syntax.
-  **Ex:** `City.show(my_city_id)`
-- #### Named Parameters
-  ##### `<command> <class name> (<named_parameters>)` syntax.
-  **Ex:** `create Amenity name="WiFi"`
+Sixtus Agbo Miracle - [Github](https://github.com/sixtusagbo) / [Twitter](https://twitter.com/sixtusagbo)
+Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico) 
